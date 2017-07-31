@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const download = require('../lib/download');
 const upgrade = require('../lib/upgrade');
 const link = require('../lib/link');
@@ -7,7 +8,7 @@ const link = require('../lib/link');
 
 exports.ui5_schema = function (options = {
   sdk: 'sapui5',
-  version: '1.28.15',
+  version: '',
   outputDir: '.tmp/ui5-schemas',
   download: true,
   upgrade: true,
