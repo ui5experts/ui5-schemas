@@ -1,7 +1,7 @@
 ## What is UI5 Schemas?
 
-UI5 Schemas allows you to develop SAPUI5/OpenUI5 XMLViews at a maximum convinience. It downloads, upgrades and sets
-up SAPUI5/OpenUI5 XML schemas for a better development experience in your favourite IDE (if it is not SAP Web IDE ;).
+UI5 Schemas allows you to develop SAPUI5/OpenUI5 XML at a maximum convinience. It downloads, upgrades and sets
+up SAPUI5/OpenUI5 XML schemas for a better development experience in your favourite IDE (if it is WebStorm ;).
 
 ![](./docs/xml-code-completion.gif)
 
@@ -26,3 +26,5 @@ npx ui5-schemas
 
 
 ## What is yet to come?
+
+* Eclipse support
