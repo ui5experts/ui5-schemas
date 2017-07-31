@@ -1,0 +1,45 @@
+{
+  "name": "ui5-schemas",
+  "version": "0.0.1",
+  "description": "A tool to download, fix and setup SAPUI5/OpenUI5 XML schemas for a better development experience",
+  "author": {
+    "name": "Christian Schuff",
+    "email": "christian.schuff@ui5experts.com"
+  },
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "npm run -s mocha && npm run -s eslint",
+    "coverage": "istanbul cover _mocha",
+    "mocha": "mocha test/*.spec.js",
+    "eslint": "eslint 'src/**/*.js' 'test/**/*.js' --env mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ui5experts/ui5-schemas.git"
+  },
+  "keywords": [
+    "SAPUI5",
+    "OpenUI5",
+    "XMLView",
+    "XML-Schema",
+    "XSD",
+    "WebStorm",
+    "Eclipse",
+    "Code Completion",
+    "Development"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^3.0.1",
+    "request": "^2.81.0",
+    "xml2js": "^0.4.17",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2"
+  }
+}
