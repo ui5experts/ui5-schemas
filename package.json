@@ -1,7 +1,7 @@
 {
   "name": "ui5-schemas",
   "version": "0.0.1",
-  "description": "UI5 Schemas allows you to develop SAPUI5/OpenUI5 XML at a maximum convinience. It downloads, upgrades and setsup SAPUI5/OpenUI5 XML schemas for a better development experience in your favourite IDE (if it is WebStorm ;).",
+  "description": "UI5 Schemas allows you to develop SAPUI5/OpenUI5 XML at a maximum convenience. It downloads, upgrades and sets up SAPUI5/OpenUI5 XML schemas for a better development experience in your favorite IDE (if it is WebStorm ;).",
   "author": {
     "name": "Christian Schuff",
     "email": "christian.schuff@ui5experts.com"
