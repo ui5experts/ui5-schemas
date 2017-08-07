@@ -3,14 +3,35 @@
 const download = require('../lib/download');
 const upgrade = require('../lib/upgrade');
 const link = require('../lib/link');
+const yargs = require('yargs');
 
-// TODO: Use yargs
+const argv = yargs.usage('Usage: ui5-schemas [options]')
+  .example('ui5-schemas --sdk openui5 --version 1.28.15', 'Setup with openui5 schemas in version 1.28.15')
+  .example('npx ui5-schemas --sdk openui5 --version 1.28.15', 'NPM5')
+  .describe('sdk', 'The sdk to be used. Valid options are \'sapui5\' or \'openui5\'.')
+  .describe('v', 'The UI5 version to be used, defaults to \'\' which means latest.')
+  .alias('v', 'version')
+  .describe('outputDir', 'The base directory to output UI5 schemas to.')
+  .describe('upgrade', 'Whether to upgrade UI5 schemas for a better development experience or leave them untouched.')
+  .describe('link', 'Whether to auto-link UI5 schemas with your favorite IDE (if it is WebStorm ;).')
+  .help('h')
+  .alias('h', 'help')
+  .global(['sdk', 'v', 'outputDir', 'upgrade', 'link', 'debug'])
+  .default({
+    sdk: 'sapui5',
+    v: '',
+    outputDir: '.tmp/ui5-schemas',
+    upgrade: true,
+    link: true,
+  })
+  .default('debug', () => process.env.SYSTEM_DEBUG === 'true')
+  .argv;
+
 
 exports.ui5_schema = function (options = {
   sdk: 'sapui5',
   version: '',
   outputDir: '.tmp/ui5-schemas',
-  download: true,
   upgrade: true,
   link: true,
 }) {
@@ -50,4 +71,4 @@ exports.ui5_schema = function (options = {
 };
 
 
-exports.ui5_schema();
+exports.ui5_schema(argv);
