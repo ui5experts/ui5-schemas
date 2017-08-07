@@ -1,6 +1,6 @@
 {
   "name": "ui5-schemas",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "UI5 Schemas allows you to develop SAPUI5/OpenUI5 XML at a maximum convenience. It downloads, upgrades and sets up SAPUI5/OpenUI5 XML schemas for a better development experience in your favorite IDE (if it is WebStorm ;).",
   "author": {
     "name": "Christian Schuff",
@@ -8,10 +8,8 @@
   },
   "bin": "bin/index.js",
   "scripts": {
-    "test": "npm run -s mocha && npm run -s eslint",
-    "coverage": "istanbul cover _mocha",
-    "mocha": "mocha test/*.spec.js",
-    "eslint": "eslint 'src/**/*.js' 'test/**/*.js' --env mocha"
+    "test": "npm run -s eslint",
+    "eslint": "eslint 'bin/**/*.js' 'lib/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -38,8 +36,6 @@
   "devDependencies": {
     "eslint": "^4.3.0",
     "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.4.2"
+    "eslint-plugin-import": "^2.7.0"
   }
 }

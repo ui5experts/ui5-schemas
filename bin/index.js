@@ -56,7 +56,7 @@ exports.ui5_schema = function (options = {
   });
 
 
-  dlPromise.then((values) => {
+  dlPromise.then(() => {
     console.log('\nYay, all schema files were successfully downloaded!\n');
     if (options.upgrade) {
       upgrade(options, allLibs);
