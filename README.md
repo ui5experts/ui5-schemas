@@ -33,3 +33,4 @@ npx ui5-schemas
 ## What is yet to come?
 
 * Eclipse support
+* Feel free to [open an issue](https://github.com/ui5experts/ui5-schemas/issues/new) if you are missing something else!
