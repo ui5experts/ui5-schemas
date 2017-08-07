@@ -24,7 +24,11 @@ ui5-schemas
 npm 5:
 ```sh
 npx ui5-schemas
-```
+````
+
+Use cli option ``--help`` for more details
+
+![](./docs/cli-help.gif)
 
 
 ## Features
