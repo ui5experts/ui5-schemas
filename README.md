@@ -1,3 +1,8 @@
+# UI5 Schemas
+
+[![Build Status](https://travis-ci.org/ui5experts/ui5-schemas.svg?branch=master)](https://travis-ci.org/ui5experts/ui5-schemas)
+
+
 ## What is UI5 Schemas?
 
 UI5 Schemas allows you to develop SAPUI5/OpenUI5 XML at a maximum convenience. It downloads, upgrades and sets
