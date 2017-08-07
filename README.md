@@ -29,7 +29,7 @@ npx ui5-schemas
 
 Use cli option ``--help`` for more details
 
-```sh
+```
 $ ui5-schemas --help
 
 Usage: ui5-schemas [options]
