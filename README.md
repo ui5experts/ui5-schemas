@@ -54,6 +54,11 @@ Examples:
 ## Features
 
 
+## Troubleshooting
+
+Proxies used according to [npm module request](https://www.npmjs.com/package/request#proxies).
+
+
 ## What is yet to come?
 
 * Eclipse support
