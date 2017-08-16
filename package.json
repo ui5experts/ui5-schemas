@@ -30,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^3.0.1",
+    "minilog": "^3.1.0",
     "request": "^2.81.0",
     "xml2js": "^0.4.17",
     "yargs": "^6.3.0"
