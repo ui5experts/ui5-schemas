@@ -42,7 +42,7 @@ function createLogger(debug) {
 }
 
 
-exports.ui5_schema = function (options = {
+exports.ui5_schemas = function ui5Schemas(options = {
   sdk: 'sapui5',
   version: '',
   outputDir: '.tmp/ui5-schemas',
@@ -88,4 +88,4 @@ exports.ui5_schema = function (options = {
 };
 
 
-exports.ui5_schema(argv);
+exports.ui5_schemas(argv);
