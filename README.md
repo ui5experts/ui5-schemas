@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ui5experts/ui5-schemas.svg?branch=master)](https://travis-ci.org/ui5experts/ui5-schemas)
 [![npm version](https://img.shields.io/npm/v/ui5-schemas.svg)](https://www.npmjs.com/package/ui5-schemas)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 
 ## What is UI5 Schemas?
