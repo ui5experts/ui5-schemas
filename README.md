@@ -57,6 +57,13 @@ Examples:
 ## Features
 
 
+## Known Limitations
+
+The xml schema files provided by SAP come with some limitations that this module does not fix (yet):
+* Binding syntax is not supported
+* ...
+
+
 ## Troubleshooting
 
 Proxies used according to [npm module request](https://www.npmjs.com/package/request#proxies).
