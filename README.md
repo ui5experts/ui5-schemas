@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/ui5experts/ui5-schemas.svg?branch=master)](https://travis-ci.org/ui5experts/ui5-schemas)
 [![npm version](https://img.shields.io/npm/v/ui5-schemas.svg)](https://www.npmjs.com/package/ui5-schemas)
-[![dependency health](https://david-dm.org/ui5experts/ui5-schemas/status.svg)]()
-[![dependency health](https://david-dm.org/ui5experts/ui5-schemas/dev-status.svg)]()
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![dependency health](https://david-dm.org/ui5experts/ui5-schemas/status.svg)](https://david-dm.org/ui5experts/ui5-schemas)
+[![devDependency health](https://david-dm.org/ui5experts/ui5-schemas/dev-status.svg)](https://david-dm.org/ui5experts/ui5-schemas?type=dev)
+[![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 
 ## What is UI5 Schemas?
