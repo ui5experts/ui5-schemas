@@ -66,7 +66,7 @@ The xml schema files provided by SAP come with some limitations that this module
 
 ## Usage behind Proxies
 
-Proxies used according to [npm module request](https://www.npmjs.com/package/request#proxies). Make sure to have set the following env vars according to your proxy config:
+Proxies used according to [npm module request](https://www.npmjs.com/package/request#proxies). Make sure to have set the following env vars:
 * HTTP_PROXY / http_proxy
 * HTTPS_PROXY / https_proxy
 * NO_PROXY / no_proxy
