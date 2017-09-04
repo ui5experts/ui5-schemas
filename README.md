@@ -64,9 +64,20 @@ The xml schema files provided by SAP come with some limitations that this module
 * ...
 
 
-## Troubleshooting
+## Usage behind Proxies
 
-Proxies used according to [npm module request](https://www.npmjs.com/package/request#proxies).
+Proxies used according to [npm module request](https://www.npmjs.com/package/request#proxies). Make sure to have set the following env vars:
+* HTTP_PROXY / http_proxy
+* HTTPS_PROXY / https_proxy
+* NO_PROXY / no_proxy
+
+If you are behind a corporate proxy and experience 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' it is most probably due to an invalid proxy certificate. You can still run ui5-schemas like this at your own risk:
+```sh
+NODE_TLS_REJECT_UNAUTHORIZED=0 ui5-schemas
+# windows
+set NODE_TLS_REJECT_UNAUTHORIZED=0
+ui5-schemas
+```
 
 
 ## What is yet to come?
