@@ -40,7 +40,6 @@ Usage: ui5-schemas [options]
 Options:
   --sdk          The sdk to be used. Valid options are 'sapui5' or 'openui5'.   [default: "sapui5"]
   -v, --version  The UI5 version to be used, defaults to '' which means latest. [default: ""]
-  --outputDir    The base directory to output UI5 schemas to.                   [default: ".tmp/ui5-schemas"]
   --upgrade      Whether to upgrade UI5 schemas for a better development
                  experience or leave them untouched.                            [default: true]
   --link         Whether to auto-link UI5 schemas with your favorite IDE (if it

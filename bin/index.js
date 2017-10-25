@@ -3,6 +3,7 @@
 const download = require('../lib/download');
 const upgrade = require('../lib/upgrade');
 const link = require('../lib/link');
+const util = require('../lib/util');
 const yargs = require('yargs');
 const Minilog = require('minilog');
 
@@ -16,7 +17,6 @@ const argv = yargs.usage('Usage: ui5-schemas [options]')
   .choices('sdk', ['sapui5', 'openui5'])
   .describe('v', 'The UI5 version to be used, defaults to \'\' which means latest.')
   .alias('v', 'version')
-  .describe('outputDir', 'The base directory to output UI5 schemas to.')
   .describe('upgrade', 'Whether to upgrade UI5 schemas for a better development experience or leave them untouched.')
   .describe('link', 'Whether to auto-link UI5 schemas with your favorite IDE (if it is WebStorm ;).')
   .describe('debug', 'Whether to show debug output')
@@ -26,7 +26,6 @@ const argv = yargs.usage('Usage: ui5-schemas [options]')
   .default({
     sdk: 'sapui5',
     v: '',
-    outputDir: '.tmp/ui5-schemas',
     upgrade: true,
     link: true,
   })
@@ -46,7 +45,7 @@ function createLogger(debug) {
 exports.ui5_schemas = function ui5Schemas(options = {
   sdk: 'sapui5',
   version: '',
-  outputDir: '.tmp/ui5-schemas',
+  outputDir: util.getUI5SchemasAppDataDir(),
   upgrade: true,
   link: true,
 }) {
@@ -84,9 +83,10 @@ exports.ui5_schemas = function ui5Schemas(options = {
     }
   }, (e) => {
     log.error('Damn... Something went all wrong while downloading the schema files!');
+    log.error(`Are you sure the version '${options.version}' is still available on '${options.sdk}' download pages?`);
     log.error(e);
   });
 };
 
-
+argv.outputDir = util.getUI5SchemasDir();
 exports.ui5_schemas(argv);
