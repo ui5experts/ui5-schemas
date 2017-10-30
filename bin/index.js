@@ -1,13 +1,8 @@
 #!/usr/bin/env node
 
-const download = require('../lib/download');
-const upgrade = require('../lib/upgrade');
-const link = require('../lib/link');
+const ui5Schemas = require('../lib/main');
 const util = require('../lib/util');
 const yargs = require('yargs');
-const Minilog = require('minilog');
-
-const log = Minilog('ui5-schemas');
 
 
 const argv = yargs.usage('Usage: ui5-schemas [options]')
@@ -17,76 +12,18 @@ const argv = yargs.usage('Usage: ui5-schemas [options]')
   .choices('sdk', ['sapui5', 'openui5'])
   .describe('v', 'The UI5 version to be used, defaults to \'\' which means latest.')
   .alias('v', 'version')
+  .describe('libs', 'Comma-separated list of UI5 libraries that should be downloaded (and linked' +
+    ' to your project), e.g. "sap.ui.core, sap.m" .')
   .describe('upgrade', 'Whether to upgrade UI5 schemas for a better development experience or leave them untouched.')
   .describe('link', 'Whether to auto-link UI5 schemas with your favorite IDE (if it is WebStorm ;).')
   .describe('debug', 'Whether to show debug output')
   .help('h')
   .alias('h', 'help')
-  .global(['sdk', 'v', 'outputDir', 'upgrade', 'link', 'debug'])
-  .default({
-    sdk: 'sapui5',
-    v: '',
-    upgrade: true,
-    link: true,
-  })
+  .global(['sdk', 'v', 'outputDir', 'upgrade', 'link', 'debug', 'force'])
+  .default(util.getDefaultOptions())
   .default('debug', () => process.env.SYSTEM_DEBUG === 'true')
   .argv;
 
 
-function createLogger(debug) {
-  const myFilter = new Minilog.Filter();
-  myFilter.clear().deny('ui5-schemas', debug ? '*' : 'debug');
-  Minilog.pipe(myFilter)
-    .pipe(Minilog.backends.console.formatMinilog)
-    .pipe(Minilog.backends.console);
-}
-
-
-exports.ui5_schemas = function ui5Schemas(options = {
-  sdk: 'sapui5',
-  version: '',
-  outputDir: util.getUI5SchemasAppDataDir(),
-  upgrade: true,
-  link: true,
-}) {
-  createLogger(options.debug);
-  log.info(`Preparing '${options.sdk}' schemas in version '${options.version || 'latest'}'...`);
-
-  let allLibs = {};
-
-  // do the downloading and encapsulate in Promise
-  const dlPromise = new Promise((resolve, reject) => {
-    download.allLibsFile(options)
-      .then((allLibsJSON) => {
-        allLibs = allLibsJSON;
-        download.schemas(options, allLibs)
-          .then((values) => {
-            resolve(values);
-          })
-          .catch((e) => {
-            reject(e);
-          });
-      })
-      .catch((e) => {
-        reject(e);
-      });
-  });
-
-
-  dlPromise.then(() => {
-    log.info('Yay, all schema files were successfully downloaded!');
-    if (options.upgrade) {
-      upgrade(options, allLibs);
-    }
-    if (options.link) {
-      link(options, allLibs);
-    }
-  }, (e) => {
-    log.error('Damn... Something went all wrong while downloading the schema files!');
-    log.error(`Are you sure the version '${options.version}' is still available on '${options.sdk}' download pages?`);
-    log.error(e);
-  });
-};
-
 argv.outputDir = util.getUI5SchemasDir();
-exports.ui5_schemas(argv);
+ui5Schemas(argv);

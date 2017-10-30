@@ -55,6 +55,12 @@ Examples:
 
 ## Features
 
+### Multi-SDK Support
+Use the 'OpenUI5' or 'SAPUI5' SDK for your project.
+
+### Multi-Version Support
+Use any available OpenUI5/SAPUI5 version in your project. Switch versions with ease. 
+
 
 ## Known Limitations
 
