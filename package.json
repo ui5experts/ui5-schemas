@@ -9,7 +9,8 @@
   },
   "bin": "bin/index.js",
   "scripts": {
-    "test": "npm run -s eslint",
+    "test": "npm run -s eslint && mocha",
+    "mocha": "mocha",
     "eslint": "eslint 'bin/**/*.js' 'lib/**/*.js'"
   },
   "repository": {
@@ -35,12 +36,16 @@
     "fs-extra": "^4.0.1",
     "minilog": "^3.1.0",
     "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
     "xml2js": "^0.4.19",
     "yargs": "^8.0.2"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
+    "nock": "^9.0.25",
+    "sinon": "^4.0.2"
   }
 }

@@ -1,0 +1,14 @@
+<xsd:simpleType name="_BindingType">
+  <xsd:restriction base="xsd:string">
+    <xsd:pattern value="\{.*\}"/>
+  </xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_BindingTypeBoolean">
+<xsd:union memberTypes="_BindingType xsd:boolean"/>
+</xsd:simpleType>
+<xsd:simpleType name="_BindingTypeFloat">
+<xsd:union memberTypes="_BindingType xsd:float"/>
+</xsd:simpleType>
+<xsd:simpleType name="_BindingTypeInt">
+<xsd:union memberTypes="_BindingType xsd:int"/>
+</xsd:simpleType>
