@@ -4,3 +4,4 @@ node_modules
 .tmp
 .idea
 npm-debug.log
+*.iml
