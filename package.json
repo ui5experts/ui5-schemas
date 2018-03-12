@@ -32,15 +32,15 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^4.0.1",
+    "fs-extra": "^5.0.0",
     "minilog": "^3.1.0",
     "request": "^2.83.0",
     "xml2js": "^0.4.19",
-    "yargs": "^8.0.2"
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
-    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
   }
 }
