@@ -26,12 +26,12 @@ const { argv } = yargs.usage('Usage: ui5-schemas [options]')
     type: 'string',
   })
 
-  .describe('libs', 'Comma-separated list of UI5 libraries that should be downloaded (and linked'
-    + ' to your project), e.g. "sap.ui.core, sap.m" .')
+// .describe('libs', 'Comma-separated list of UI5 libraries that should be downloaded (and linked'
+//   + ' to your project), e.g. "sap.ui.core, sap.m" .')
 
   .option('upgrade', {
     demandOption: true,
-    default: false,
+    default: true,
     describe: 'Whether to upgrade UI5 schemas for a better development experience or leave them untouched.',
     type: 'boolean',
   })
