@@ -7,12 +7,14 @@ const util = require('../lib/util');
 
 const { argv } = yargs.usage('Usage: ui5-schemas [options]')
   .example('ui5-schemas --sdk openui5 --version 1.28.15', 'Setup with openui5 schemas in version 1.28.15')
+  .example('ui5-schemas --sdk openui5nightly', 'Setup with openui5nightly')
+  .example('ui5-schemas --no-upgrade', 'Setup schemas without schema enhancement')
   .example('npx ui5-schemas --sdk openui5 --version 1.28.15', 'NPM5')
 
   .option('sdk', {
     demandOption: true,
     default: 'sapui5',
-    describe: 'The sdk to be used. Valid options are \'sapui5\' or \'openui5\'.',
+    describe: 'The sdk to be used.',
     choices: ['sapui5', 'openui5', 'openui5nightly'],
     type: 'string',
   })
