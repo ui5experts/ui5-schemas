@@ -13,7 +13,7 @@ const { argv } = yargs.usage('Usage: ui5-schemas [options]')
     demandOption: true,
     default: 'sapui5',
     describe: 'The sdk to be used. Valid options are \'sapui5\' or \'openui5\'.',
-    choices: ['sapui5', 'openui5'],
+    choices: ['sapui5', 'openui5', 'openui5nightly'],
     type: 'string',
   })
 
