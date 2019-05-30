@@ -31,7 +31,7 @@ npx ui5-schemas
 
 Use cli option ``--help`` for more details
 
-```
+```sh
 $ ui5-schemas --help
 
 Usage: ui5-schemas [options]
@@ -48,30 +48,12 @@ Optionen:
                  is WebStorm ;).                       [boolean] [default: true]
   --debug        Whether to show debug output
                                                       [boolean] [default: false]
-  -h, --help     Hilfe anzeigen                                        
+  -h, --help     Show help
 
 Examples:
   ui5-schemas --sdk openui5 --version 1.28.15       Setup with openui5 schemas in version 1.28.15
   ui5-schemas --sdk openui5nightly                  Setup with openui5nightly
   ui5-schemas --no-upgrade                          Setup schemas without schema enhancement
-  npx ui5-schemas --sdk openui5 --version 1.28.15   NPM5
-
-$ ui5-schemas --help
-
-Usage: ui5-schemas [options]
-
-Options:
-  --sdk          The sdk to be used. Valid options are 'sapui5' or 'openui5'.   [default: "sapui5"]
-  -v, --version  The UI5 version to be used, defaults to '' which means latest. [default: ""]
-  --upgrade      Whether to upgrade UI5 schemas for a better development
-                 experience or leave them untouched.                            [default: true]
-  --link         Whether to auto-link UI5 schemas with your favorite IDE (if it
-                 is WebStorm ;).                                                [default: true]
-  -h, --help     Show help                                                      [boolean]
-  --debug                                                                       [default: (generated-value)]
-
-Examples:
-  ui5-schemas --sdk openui5 --version 1.28.15       Setup with openui5 schemas in version 1.28.15
   npx ui5-schemas --sdk openui5 --version 1.28.15   NPM5
 ```
 
