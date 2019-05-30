@@ -36,9 +36,9 @@ $ ui5-schemas --help
 
 Usage: ui5-schemas [options]
 
-Optionen:
+Options:
   --sdk          The sdk to be used.
-   [string] [Choices: "sapui5", "openui5", "openui5nightly"] [default: "sapui5"]
+   [string] [choices: "sapui5", "openui5", "openui5nightly"] [default: "sapui5"]
   --version, -v  The UI5 version to be used, defaults to '' which means latest.
                                                           [string] [default: ""]
   --upgrade      Whether to upgrade UI5 schemas for a better development
