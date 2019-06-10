@@ -17,16 +17,16 @@ up SAPUI5/OpenUI5 XML schemas for a better development experience in your favori
 ## Getting Started
 
 ```sh
-npm install -g ui5-schemas
+$ npm install -g ui5-schemas
 ```
 
 ```sh
-ui5-schemas
+$ ui5-schemas
 ```
 
 npm 5:
 ```sh
-npx ui5-schemas
+$ npx ui5-schemas
 ````
 
 Use cli option ``--help`` for more details
@@ -37,6 +37,8 @@ $ ui5-schemas --help
 Usage: ui5-schemas [options]
 
 Options:
+  --origin       The src url (sdk base url) or path (sdk root dir) to be used
+                 for schema loading.                                    [string]
   --sdk          The sdk to be used.
    [string] [choices: "sapui5", "openui5", "openui5nightly"] [default: "sapui5"]
   --version, -v  The UI5 version to be used, defaults to '' which means latest.
@@ -53,6 +55,10 @@ Options:
 Examples:
   ui5-schemas --sdk openui5 --version 1.28.15       Setup with openui5 schemas in version 1.28.15
   ui5-schemas --sdk openui5nightly                  Setup with openui5nightly
+  ui5-schemas --origin '/Users/cschuff/Downloads/sapui5-sdk-1.65.1'  
+                                                    Setup schemas from local sdk download
+  ui5-schemas --origin 'https://my.abap.system/sap/public/bc/ui5_ui5'  
+                                                    Setup schemas from sdk on an ABAP system
   ui5-schemas --no-upgrade                          Setup schemas without schema enhancement
   npx ui5-schemas --sdk openui5 --version 1.28.15   NPM5
 ```
@@ -60,11 +66,14 @@ Examples:
 
 ## Features
 
+### Custom Origin
+Install schemas from any origin: Use the CDN, a downloaded SDK or even your own remote system.
+
 ### Multi-SDK Support
 Use the 'OpenUI5', 'OpenUI5 Nightly' or 'SAPUI5' SDK for your project.
 
 ### Multi-Version Support
-Use any available OpenUI5/SAPUI5 version in your project. Switch versions with ease. 
+Use any available OpenUI5/SAPUI5 version in your project. Switch versions with ease!
 
 
 ## Known Limitations
@@ -87,6 +96,11 @@ NODE_TLS_REJECT_UNAUTHORIZED=0 ui5-schemas
 # windows
 set NODE_TLS_REJECT_UNAUTHORIZED=0
 ui5-schemas
+```
+
+If none of this works just download a SAPUI5/OpenUI5 SDK and install schemas from the filesystem:
+```sh
+$ ui5-schemas --origin '/Users/cschuff/Downloads/sapui5-sdk-1.65.1'
 ```
 
 
