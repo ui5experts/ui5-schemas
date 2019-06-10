@@ -2,14 +2,21 @@
 const yargs = require('yargs');
 
 const ui5Schemas = require('../lib/main');
-const util = require('../lib/util');
+const Options = require('../lib/Options');
 
 
 const { argv } = yargs.usage('Usage: ui5-schemas [options]')
   .example('ui5-schemas --sdk openui5 --version 1.28.15', 'Setup with openui5 schemas in version 1.28.15')
   .example('ui5-schemas --sdk openui5nightly', 'Setup with openui5nightly')
+  .example('ui5-schemas --origin \'/Users/cschuff/Downloads/sapui5-sdk-1.65.1\'', 'Setup schemas from local sdk download')
+  .example('ui5-schemas --origin \'https://my.abap.system/sap/public/bc/ui5_ui5\'', 'Setup schemas from sdk on an ABAP system')
   .example('ui5-schemas --no-upgrade', 'Setup schemas without schema enhancement')
   .example('npx ui5-schemas --sdk openui5 --version 1.28.15', 'NPM5')
+
+  .option('origin', {
+    describe: 'The src url (sdk base url) or path (sdk root dir) to be used for schema loading.',
+    type: 'string',
+  })
 
   .option('sdk', {
     demandOption: true,
@@ -56,5 +63,5 @@ const { argv } = yargs.usage('Usage: ui5-schemas [options]')
   .alias('h', 'help');
 
 
-argv.outputDir = util.getUI5SchemasDir();
-ui5Schemas(argv);
+const options = new Options(argv);
+ui5Schemas(options);
