@@ -79,7 +79,8 @@ Use any available OpenUI5/SAPUI5 version in your project. Switch versions with e
 ## Known Limitations
 
 The xml schema files provided by SAP come with some limitations that this module does not fix (yet):
-* Binding syntax is not supported
+* Binding syntax is not supported ([#3](https://github.com/ui5experts/ui5-schemas/issues/3))
+* Aggregation Bindings that can be written as properties ([#29](https://github.com/ui5experts/ui5-schemas/issues/29))
 * ...
 
 
