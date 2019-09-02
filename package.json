@@ -41,7 +41,7 @@
     "minilog": "3.1.0",
     "request": "2.88.0",
     "request-promise": "4.2.4",
-    "xml2js": "0.4.19",
+    "xml2js": "0.4.20",
     "yargs": "14.0.0"
   },
   "devDependencies": {
