@@ -6,6 +6,14 @@
 [![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 
+## ⚠️ NOTE
+
+As [SAP sunsetted the support for the SAPUI5 Tools for Eclipse](https://blogs.sap.com/2019/11/26/sapui5-tools-for-eclipse-now-is-the-time-to-look-for-alternatives/) they also removed the XSD schemas from the project. ui5-schemas obviously can not work without those schemas. If you want to continue using ui5-schemas keep using the latest available version of SAPUI5/OpenUI5 that includes schemas which is *1.71*.
+
+I'm working together with the SAP colleagues to potentially find an alternative solution to keep this project alive. Stay tuned!
+
+More detailed information on the issue in [sap/openui5#2751](https://github.com/SAP/openui5/issues/2751) resp. [ui5experts/ui5-schemas#47](https://github.com/ui5experts/ui5-schemas/issues/47)
+
 ## What is UI5 Schemas?
 
 UI5 Schemas allows you to develop SAPUI5/OpenUI5 XML at a maximum convenience. It downloads, upgrades and sets
